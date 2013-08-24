@@ -28,8 +28,11 @@ class Bar {
 
 
 int main() {
+  cout << "Register Foo" << "\n";
   DataWhale::Register(new Foo(100));
-  DataWhale::Register(new Bar("hello world"));
   DataWhale::Get<Foo>()->Print();
+  cout << "Foo is registered: " << DataWhale::IsRegistered<Foo>() << "\n";
+  cout << "Bar is registered: " << DataWhale::IsRegistered<Bar>() << "\n";
+  DataWhale::Register(new Bar("hello world"));
   DataWhale::Get<Bar>()->Print();
 }

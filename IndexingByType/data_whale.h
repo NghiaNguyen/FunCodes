@@ -16,6 +16,13 @@ class DataWhale {
         data_[type_num] = (void *)datum;
       }
 
+    template<typename T>
+      static bool IsRegistered() {
+        int type_num = TypeIndexer<T>::type_num;
+        return data_.find(type_num) != data_.end();
+      }
+
+
   private:
     template<typename T>
       struct TypeIndexer {

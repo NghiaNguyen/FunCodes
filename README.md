@@ -1,4 +1,4 @@
 FunCodes
 ========
 
-A repo of fun pieces of code
+A repo for storing fun pieces of code.
